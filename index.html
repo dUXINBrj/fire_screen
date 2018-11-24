@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" >
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_879335_f8esgradgym.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./static/js/websocket.js"></script>
+    <title>大屏展示</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <div id="audio" style="display:none;">
+        <audio id="bgMusic" loop="loop">
+            <source src="./static/mp3/6155.mp33" type="audio/mp3">
+        </audio>
+    </div>
+    <div style="border:1px solid white;padding-top:5px;display:none;width: 80%;">
+      <div style="margin: 10px;">
+          <!-- *** 各类参数[begin] ******************************************************************************** -->
+          <input type="text" id="textWndNum" value="1" size="5"/>
+          <input type="text" id="textWndNum2" value="1" size="5"/>
+          <input type="text" id="textIP" value="58.214.236.106"  size="15"/>
+          <input type="text" id="textPort" value="9000" size="15"/>
+          <select id="selectStreamType"  style="display:inline-block;">
+              <option value="1">主码流</option>
+              <option value="2">辅码流</option>
+          </select>
+          <select id="selectMediaType"  style="display:inline-block;">
+              <option value="1">视频</option>
+              <option value="2">音频</option>
+              <option value="3">视频 + 音频</option>
+          </select>
+          <select id="selectTransType"  style="display:inline-block;">
+              <option value="1">TCP</option>
+              <option value="0">UDP</option>
+          </select>
+
+          <select id="selectDevType"  style="display:inline-block;">
+              <option value="1">1 设备</option>
+              <option value="2" selected>2 通道</option>
+          </select>
+          <select id="selectAudioType"  style="display:inline-block;">
+              <option value="1">1 PCM</option>
+              <option value="2" selected>2 G711a</option>
+              <option value="3">3 AMR</option>
+              <option value="4">4 G711u</option>
+              <option value="5">5 G726</option>
+              <option value="6">6 AAC</option>
+              <option value="7">7 G722</option>
+              <option value="8">8 G711</option>
+          </select>
+          <select id="selectBitType"  style="display:inline-block;">
+              <option value="8">8</option>
+              <option value="16" selected>16</option>
+          </select>
+          <select id="selectSampleType"  style="display:inline-block;">
+              <option value="8000">8000</option>
+              <option value="16000">16000</option>
+              <option value="8192">8192</option>
+              <option value="48000">48000</option>
+          </select>
+          <select id="selectTransType"  style="display:inline-block;">
+              <option value="1">1 tcp</option>
+              <option value="2">2 udp</option>
+          </select>
+          <select id="selectRecordSource"  style="display:inline-block;">
+              <option value="3" >平台录像</option>
+              <option value="2">设备录像</option>
+          </select>
+          <select id="selectRecordType" style="display:inline-block;">
+              <option value="0">全部录像</option>
+              <option value="1">手动录像</option>
+              <option value="2">报警录像</option>
+              <option value="3">移动侦测</option>
+              <option value="4">视频丢失</option>
+              <option value="5">视频遮挡</option>
+              <option value="6">定时录像</option>
+              <option value="7">全天录像</option>
+          </select>
+          <!-- *** 各类参数[end] ******************************************************************************** -->
+      </div>
+  </div>
+</body>
+</html>
